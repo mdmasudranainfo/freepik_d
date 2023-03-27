@@ -11,7 +11,7 @@ const DashBoardNav = ({ setOpenMenu, openMenu }) => {
 
   console.log("nav", openMenu);
   return (
-    <div className="py-2 px-2 flex justify-between  shadow-md -z-50">
+    <div className="py-2 px-2 flex justify-between  shadow-md  bg-white sticky top-0 z-50">
       <div className="">
         <div className="flex">
           <button

@@ -7,7 +7,7 @@ import Suggestions from "../Suggestions/Suggestions";
 
 const DashboardHome = () => {
   return (
-    <div className="px-2 mt-2 overflow-scroll h-screen hide-scroll-bar">
+    <div className="px-2 mt-2  ">
       <div className="flex xl:flex-row flex-col gap-7">
         {/* content */}
         <div className="xl:w-[80%] w-full">

@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import DashboardHome from "../Components/DashboardComponent/DashboardHome/DashboardHome";
 import DashboardRakingChart from "../Components/DashboardComponent/DashboardRakingChart/DashboardRakingChart";
 import DashboardRanking from "../Components/DashboardComponent/DashboardRanking/DashboardRanking";
+import DashboardReferral from "../Components/DashboardComponent/DashboardReferral/DashboardReferral";
 import DashboardLayout from "../Components/Layout/MainLayout/DashboardLayout/DashboardLayout";
 import MainLayout from "../Components/Layout/MainLayout/MainLayout";
 import Login from "../Components/Login/Login";
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/chart",
         element: <DashboardRakingChart />,
+      },
+      {
+        path: "/dashboard/referral",
+        element: <DashboardReferral />,
       },
     ],
   },

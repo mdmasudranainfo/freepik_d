@@ -3,6 +3,7 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 import { RiArrowDownSFill, RiArrowDropUpFill } from "react-icons/ri";
 import DashBoardNav from "../../../DashboardComponent/DashBoardNav/DashBoardNav";
 import { HiBars3 } from "react-icons/hi2";
+import DashboardFooter from "../../../DashboardComponent/DashboardFooter/DashboardFooter";
 
 const DashboardLayout = () => {
   const [openFile, setOpenFile] = useState(true);
@@ -11,7 +12,7 @@ const DashboardLayout = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div>
+    <div className="">
       <div className="max-w-full flex flex-col-reverse xl:flex-row relative">
         {/* menubar */}
         <div
@@ -110,13 +111,20 @@ const DashboardLayout = () => {
           <NavLink className="p-3 block NavLink rounded-md" to="/dashboard">
             Visual Trends 2023
           </NavLink>
+          <NavLink
+            className="p-3 block NavLink rounded-md"
+            to="/dashboard/referral"
+          >
+            Referral Program
+          </NavLink>
         </div>
 
         {/* dashbord section */}
         <div className="xl:w-[85%] w-full float-right">
-          <div className="">
+          <div className=" h-screen overflow-scroll hide-scroll-bar">
             <DashBoardNav setOpenMenu={setOpenMenu} openMenu={openMenu} />
             <Outlet />
+            <DashboardFooter />
           </div>
         </div>
       </div>

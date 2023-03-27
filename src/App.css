@@ -12,6 +12,13 @@
 p {
   color: #374957;
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #374957;
+}
 body {
   font-size: 16px;
   box-sizing: border-box;
