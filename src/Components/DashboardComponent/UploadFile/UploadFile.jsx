@@ -1,9 +1,15 @@
 import React from "react";
+import { RiCloseLine } from "react-icons/ri";
 
-const UploadFile = () => {
+const UploadFile = ({ setUpload, OpenUpload }) => {
   return (
     <div className="">
-      <h1>hello </h1>
+      <div>
+        <RiCloseLine
+          onClick={() => setUpload(!OpenUpload)}
+          className="text-3xl text-primary  cursor-pointer"
+        />
+      </div>
     </div>
   );
 };
