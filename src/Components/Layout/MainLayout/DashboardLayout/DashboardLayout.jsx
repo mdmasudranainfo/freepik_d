@@ -4,12 +4,14 @@ import { RiArrowDownSFill, RiArrowDropUpFill } from "react-icons/ri";
 import DashBoardNav from "../../../DashboardComponent/DashBoardNav/DashBoardNav";
 import { HiBars3 } from "react-icons/hi2";
 import DashboardFooter from "../../../DashboardComponent/DashboardFooter/DashboardFooter";
+import UploadFile from "../../../DashboardComponent/UploadFile/UploadFile";
 
 const DashboardLayout = () => {
   const [openFile, setOpenFile] = useState(true);
 
   const [openStats, setStats] = useState(true);
   const [openMenu, setOpenMenu] = useState(false);
+  const [OpenUpload, setUpload] = useState(true);
 
   return (
     <div className="">
@@ -120,11 +122,23 @@ const DashboardLayout = () => {
         </div>
 
         {/* dashbord section */}
-        <div className="xl:w-[85%] w-full float-right">
+        <div className="xl:w-[85%] w-full float-right relative">
           <div className=" h-screen overflow-scroll hide-scroll-bar">
-            <DashBoardNav setOpenMenu={setOpenMenu} openMenu={openMenu} />
+            <DashBoardNav
+              setOpenMenu={setOpenMenu}
+              openMenu={openMenu}
+              OpenUpload={OpenUpload}
+              setUpload={setUpload}
+            />
             <Outlet />
             <DashboardFooter />
+          </div>
+          <div
+            className={`${
+              OpenUpload ? "hidden" : "block"
+            } h-screen  bg-white w-full max-w-[440px] absolute top-0 right-0 z-[500]`}
+          >
+            <UploadFile OpenUpload={OpenUpload} setUpload={setUpload} />
           </div>
         </div>
       </div>

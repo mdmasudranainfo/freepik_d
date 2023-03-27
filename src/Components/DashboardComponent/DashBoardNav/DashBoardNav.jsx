@@ -4,12 +4,12 @@ import { RxUpload } from "react-icons/rx";
 import { MdOutlineNotifications } from "react-icons/md";
 import { HiBars3 } from "react-icons/hi2";
 
-const DashBoardNav = ({ setOpenMenu, openMenu }) => {
+const DashBoardNav = ({ setOpenMenu, openMenu, OpenUpload, setUpload }) => {
   const clickHanler = () => {
     setOpenMenu(!openMenu);
   };
 
-  console.log("nav", openMenu);
+  // console.log("nav", OpenUpload);
   return (
     <div className="py-2 px-2 flex justify-between  shadow-md  bg-white sticky top-0 z-50">
       <div className="">
@@ -21,7 +21,10 @@ const DashBoardNav = ({ setOpenMenu, openMenu }) => {
             {" "}
             <HiBars3 />
           </button>
-          <button className="flex bg-primary rounded-none text-white px-5 py-1 items-center">
+          <button
+            onClick={() => setUpload(!OpenUpload)}
+            className="flex bg-primary rounded-none text-white px-5 py-1 items-center"
+          >
             <RxUpload className="text-lg mr-2 " /> <span>Upload File</span>
           </button>
           <button className="md:flex hidden ml-3 font-semibold border-primary border-2 rounded-none text-primary px-5 py-1 items-center">
