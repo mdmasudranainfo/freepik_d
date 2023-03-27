@@ -1,0 +1,36 @@
+tr:nth-child(even) {
+  background-color: #f2f5f7;
+}
+
+.MainImg {
+  transition-duration: 5s !important;
+}
+.tullTip {
+}
+
+.MainImg:hover .tullTip {
+  display: block !important;
+}
+
+/* icone design */
+.ToolIcone {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 10px 7px 0;
+  border-color: transparent #ffffffff transparent transparent;
+}
+.userTool {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 8px 5px 0;
+  border-color: transparent #ffffffff transparent transparent;
+  z-index: 100;
+}
+
+.UserAvator:hover .userName {
+  display: flex !important;
+}
+/* .userName {
+} */

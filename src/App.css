@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Proxima Nova Rg";
+  src: url("/public/fonts/ProximaNova-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  font-family: "Proxima Nova Rg";
+}
+
+p {
+  color: #374957;
+}
+body {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.NavLink:hover {
+  background-color: #343c42;
+}
+.NavLink2:hover {
+  background-color: #5a636a;
+  border-radius: 5px;
+}
+.btn {
+  border-radius: 0;
+  text-transform: capitalize;
+}
+
+/* rakinf shadow */
+.rakingShadow {
+  box-shadow: 0 0px 4px 0 rgb(113 113 113 / 12%) !important;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
