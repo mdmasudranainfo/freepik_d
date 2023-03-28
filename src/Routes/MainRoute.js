@@ -9,6 +9,8 @@ import Login from "../Components/Login/Login";
 import LoginWithEmail from "../Components/Login/LoginWithEmail";
 import SingUp from "../Components/SingUp/SingUp";
 
+// all Routing 
+
 export const router = createBrowserRouter([
   {
     path: "/",
